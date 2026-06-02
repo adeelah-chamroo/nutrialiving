@@ -27,6 +27,11 @@ body {
   font-size: 17px;
   line-height: 1.75;
 }
+img {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
 
 /* NAV */
 nav {
@@ -409,5 +414,11 @@ footer img { height: 30px; filter: brightness(10); opacity: 0.7; }
     <span class="footer-text">© 2026 Nutria by Adeelah. All Rights Reserved.</span>
 </footer>
 
+    <script>
+        document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('contextmenu', e => e.preventDefault());
+        img.draggable = false;
+        });
+    </script>
 </body>
 </html>
