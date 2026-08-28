@@ -3,203 +3,657 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Stronger You Challenge · Details</title>
+<title>8-Week Stronger You Challenge · nutria by Adeelah</title>
+<meta name="description" content="8 weeks of small-group strength coaching + practical nutrition guidance for women in Mauritius. Pods of 3–5. The First 15. Rs 4,900." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --soft:#d2d8d2;
-    --brown:#715a46;
+    --cream:#fafafa;
+    --cream-2:#d2d8d2;
+    --green:#222222;
+    --green-soft:#34362f;
+    --fern:#715a46;
+    --sage:#715a46;
+    --sand:#c7b6a4;
     --ink:#222222;
-    --taupe:#6b6056;
-    --lite:#dee2dc;        /* light text on dark */
-    --brownlite:#b7a18e;   /* brown for dark bg */
-    --card:#dfe3de;        /* light panel */
-    --hair:#b7beb7;
+    --line:rgba(34,34,34,.14);
+    --shadow:0 18px 50px -28px rgba(34,34,34,.45);
+    --wrap:1000px;
+    --narrow:660px;
   }
   *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
   body{
-    margin:0;background:#c6ccc6;
-    font-family:"Figtree",system-ui,sans-serif;color:var(--ink);
-    -webkit-font-smoothing:antialiased;padding:26px 16px;
+    margin:0;background:var(--cream);color:var(--ink);
+    font-family:"Figtree",system-ui,sans-serif;font-size:17px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;padding-bottom:80px;
   }
-  .poster{
-    max-width:840px;margin:0 auto;background:var(--soft);
-    border-radius:26px;overflow:hidden;box-shadow:0 30px 70px -30px rgba(34,34,34,.5);
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+  .narrow{max-width:var(--narrow);margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:"Figtree",Georgia,serif;font-weight:500;line-height:1.14;margin:0}
+  p{margin:0 0 1rem}
+  a{color:inherit}
+
+  .eyebrow{
+    font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--sage);margin:0 0 16px;display:flex;align-items:center;gap:12px;
   }
 
-  /* header */
-  .head{background:var(--ink);color:var(--lite);padding:34px 44px 40px;text-align:center}
-  .logo-ph{
-    width:150px;height:40px;
-    display:flex;align-items:center;justify-content:center;margin:0 auto 26px;
-    font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--brownlite);
+  .eyebrow.center{justify-content:center}
+
+  /* ---------- image placeholders ---------- */
+  .ph{
+    position:relative;width:100%;border-radius:16px;overflow:hidden;
+    background:
+      repeating-linear-gradient(135deg,rgba(113,90,70,.06) 0 14px,rgba(113,90,70,.11) 14px 28px),
+      var(--cream-2);
+    border:1.5px dashed rgba(113,90,70,.55);
+    display:flex;align-items:center;justify-content:center;text-align:center;
   }
-  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--brownlite);margin:0 0 14px}
-  .head h1{font-family:"Figtree";font-weight:900;font-size:clamp(2.1rem,6.6vw,3rem);line-height:1.04;margin:0 0 16px;letter-spacing:-.01em;color:#eceee9}
-  .promise{font-style:italic;font-weight:500;font-size:clamp(1.05rem,3.4vw,1.3rem);line-height:1.35;color:#c2c7bf;margin:0 auto 16px;max-width:34ch}
-  .facts{font-size:13px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--brownlite);margin:0}
+  .ph .ph-in{padding:22px;color:var(--sage)}
+  .ph svg{width:34px;height:34px;opacity:.6;margin-bottom:10px}
+  .ph .ph-label{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;line-height:1.5}
+  .ph.on-green{background:
+      repeating-linear-gradient(135deg,rgba(245,243,239,.05) 0 14px,rgba(245,243,239,.09) 14px 28px),
+      rgba(245,243,239,.04);
+    border-color:rgba(202,189,181,.5)}
+  .ph.on-green .ph-in{color:var(--sand)}
 
-  /* body */
-  .body{padding:40px 44px 30px}
-  .kicker-h{font-size:13px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--brown);margin:0 0 12px;position:relative}
-  .kicker-h::after{content:"";display:block;width:48px;height:3px;background:var(--brown);margin-top:12px}
-  .lead{font-size:16.5px;line-height:1.5;margin:0 0 30px;color:var(--ink)}
-  .block{margin-bottom:34px}
+  .r-hero{aspect-ratio:4/5}
+  .r-wide{aspect-ratio:16/10}
+  .r-portrait{aspect-ratio:3/4}
+  .r-square{aspect-ratio:1/1}
 
-  /* stat cards */
-  .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:12px}
-  .stat{background:var(--ink);border-radius:14px;padding:16px 6px;text-align:center}
-  .stat .n{font-weight:900;font-size:clamp(1.4rem,5vw,1.9rem);color:var(--lite);line-height:1}
-  .stat .l{font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brownlite);margin-top:7px}
-  .split{background:var(--brown);border-radius:12px;padding:15px;text-align:center;color:#efeae3;font-weight:600;font-size:15.5px}
+  /* ---------- real photos ---------- */
+  .photo{position:relative;width:100%;border-radius:16px;overflow:hidden;display:block}
+  .photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .photo.r-hero{aspect-ratio:4/5}
+  .photo.r-wide{aspect-ratio:16/10}
+  .photo.r-portrait{aspect-ratio:3/4}
+  .hero-photo .photo{box-shadow:0 24px 60px -30px rgba(0,0,0,.5)}
 
-  /* two-column */
-  .cols{display:flex;gap:30px}
-  .col{flex:1;min-width:0}
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-block;font-family:"Figtree",sans-serif;font-weight:700;
+    font-size:14.5px;letter-spacing:.05em;text-transform:uppercase;
+    padding:17px 32px;border-radius:100px;text-decoration:none;cursor:pointer;border:none;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;line-height:1.1;
+  }
+  .btn-gold{background:var(--sage);color:#fff;box-shadow:0 12px 30px -14px rgba(113,90,70,.9)}
+  .btn-gold:hover{transform:translateY(-2px);background:#748a44}
+  .btn-cream{background:var(--cream);color:var(--green)}
+  .btn-cream:hover{transform:translateY(-2px)}
+  .btn-green{background:var(--green);color:var(--cream)}
+  .btn-green:hover{transform:translateY(-2px);background:var(--green-soft)}
+  .btn .price{opacity:.72;font-weight:600}
+  .cta-wrap{text-align:center;margin-top:34px}
 
-  ul.gets{list-style:none;margin:0;padding:0}
-  ul.gets li{position:relative;padding:9px 0 9px 30px;font-size:15px;line-height:1.4;border-bottom:1px solid var(--hair)}
-  ul.gets li:last-child{border-bottom:none}
-  ul.gets li::before{content:"";position:absolute;left:2px;top:14px;width:12px;height:7px;border-left:2.4px solid var(--brown);border-bottom:2.4px solid var(--brown);transform:rotate(-45deg)}
+  /* ---------- top bar / wordmark ---------- */
+  .topbar{background:var(--green);padding:14px 0}
+  .topbar .wrap{display:flex;justify-content:center}
+  .wordmark-ph{
+    width:180px;height:34px;border-radius:8px;
+    border:1.5px dashed rgba(202,189,181,.5);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--sand);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    background:rgba(245,243,239,.04);
+  }
 
-  .phase{position:relative;padding:0 0 18px 22px}
+  /* ---------- hero ---------- */
+  .hero{background:var(--green);color:var(--cream);position:relative;overflow:hidden;padding:52px 0 92px}
+  .hero::after{
+    content:"";position:absolute;left:-5%;right:-5%;bottom:-1px;height:52px;
+    background:var(--cream);border-radius:100% 100% 0 0 / 100% 100% 0 0;
+  }
+  .hero-grid{display:flex;flex-direction:column;gap:32px;align-items:center}
+  .hero-copy{text-align:center}
+  .hero .eyebrow{justify-content:center;color:var(--sand)}
+  .hero .eyebrow::before{background:var(--sand)}
+  .hero h1{font-size:clamp(2.3rem,9vw,3.3rem);letter-spacing:-.01em;margin-bottom:18px;color:#fff}
+  .hero .promise{
+    font-family:"Figtree",serif;font-style:italic;font-weight:400;
+    font-size:clamp(1.15rem,4.6vw,1.45rem);line-height:1.38;color:var(--sand);
+    margin:0 auto 14px;max-width:30ch;
+  }
+  .hero .result{
+    font-family:"Figtree",sans-serif;font-weight:600;color:rgba(245,243,239,.82);
+    font-size:15.5px;line-height:1.4;margin:0 auto 20px;
+  }
+  .hero .blurb{color:rgba(245,243,239,.86);max-width:44ch;margin:0 auto 20px;font-size:15.5px}
+  .hero .meta{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);font-weight:600;margin-bottom:28px}
+  .hero .meta span{color:rgba(245,243,239,.5);margin:0 7px}
+  .hero-photo{width:100%;max-width:360px}
+  .hero-photo .ph{box-shadow:0 24px 60px -30px rgba(0,0,0,.5)}
+
+  /* ---------- generic section ---------- */
+  section{padding:56px 0}
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  h2.section-title{font-size:clamp(1.7rem,6vw,2.25rem);margin-bottom:10px;letter-spacing:-.01em}
+  .kicker{font-family:"Figtree",serif;font-style:italic;color:var(--sage);margin:0 0 26px;font-size:1.05rem}
+  .band{background:var(--cream-2)}
+  .band-green{background:var(--green);color:var(--cream)}
+  .band-green h2,.band-green h3{color:#fff}
+  .band-green .kicker{color:var(--sand)}
+  .band-green .eyebrow{color:var(--sand)}
+  .band-green .eyebrow::before{background:var(--sand)}
+
+  /* ---------- ticks / plain lists ---------- */
+  ul.ticks{list-style:none;margin:0;padding:0}
+  ul.ticks li{position:relative;padding:14px 0 14px 40px;border-bottom:1px solid var(--line);font-size:16.5px}
+  ul.ticks li:last-child{border-bottom:none}
+  ul.ticks li::before{content:"";position:absolute;left:2px;top:19px;width:15px;height:9px;border-left:2.4px solid var(--sage);border-bottom:2.4px solid var(--sage);transform:rotate(-45deg)}
+  ul.plain{list-style:none;margin:0;padding:0}
+  ul.plain li{padding:15px 0 15px 30px;border-bottom:1px solid var(--line);position:relative;font-size:16.5px}
+  ul.plain li:last-child{border-bottom:none}
+  ul.plain li::before{content:"";position:absolute;left:2px;top:26px;width:9px;height:9px;border-radius:50%;background:var(--sand)}
+
+  /* ---------- the gap ---------- */
+  .gap-grid{display:flex;flex-direction:column;gap:14px}
+  .gap-card{border-radius:18px;padding:24px 22px}
+  .gap-now{background:#fff;border:1px solid var(--line)}
+  .gap-now h3{color:var(--green)}
+  .gap-method{background:var(--green);color:var(--cream);text-align:center}
+  .gap-method h3{color:#fff;font-size:1.3rem;margin-bottom:8px}
+  .gap-method p{color:var(--sand);margin:0;font-size:15.5px;font-style:italic;font-family:"Figtree",serif}
+  .gap-next{background:var(--cream);border:1px solid var(--line)}
+  .gap-next h3{color:var(--fern)}
+  .gap-card h3{font-size:1.05rem;letter-spacing:.02em;margin-bottom:14px;font-family:"Figtree",sans-serif;font-weight:700;text-transform:uppercase;font-size:12px;letter-spacing:.16em}
+  .gap-list{list-style:none;margin:0;padding:0}
+  .gap-list li{padding:8px 0 8px 22px;position:relative;font-size:15.5px;line-height:1.45}
+  .gap-now .gap-list li::before{content:"";position:absolute;left:0;top:12px;width:11px;height:2px;background:var(--sand)}
+  .gap-next .gap-list li::before{content:"";position:absolute;left:0;top:8px;width:13px;height:8px;border-left:2.2px solid var(--sage);border-bottom:2.2px solid var(--sage);transform:rotate(-45deg)}
+  .gap-arrow{text-align:center;color:var(--sage);font-size:22px;line-height:1;margin:2px 0}
+
+  /* ---------- number cards ---------- */
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:16px}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 14px;text-align:center}
+  .band .stat{background:var(--cream)}
+  .stat .n{font-family:"Figtree",serif;font-size:2.1rem;color:var(--green);line-height:1}
+  .stat .l{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);font-weight:700;margin-top:8px}
+  .split{
+    background:var(--green);color:var(--cream);border-radius:16px;padding:22px;text-align:center;
+    display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;
+  }
+  .split .s-item{text-align:center}
+  .split .s-n{font-family:"Figtree",serif;font-size:1.5rem;color:#fff;line-height:1}
+  .split .s-l{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--sand);font-weight:700;margin-top:4px}
+  .split .plus{font-family:"Figtree",serif;font-size:1.6rem;color:var(--sage)}
+
+  /* ---------- pillars ---------- */
+  .pillars-grid{display:flex;flex-direction:column;gap:16px}
+  .pillar{background:rgba(245,243,239,.06);border:1px solid rgba(245,243,239,.16);border-radius:18px;padding:26px 24px}
+  .pillar .p-label{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);font-weight:700;margin-bottom:12px;display:block}
+  .pillar h3{font-size:1.4rem;margin-bottom:8px;color:#fff}
+  .pillar p{color:rgba(245,243,239,.86);margin:0;font-size:15.5px}
+  .pillars-bridge{text-align:center;font-family:"Figtree",serif;font-style:italic;font-size:1.22rem;line-height:1.45;color:var(--sand);margin:26px auto 0;max-width:32ch}
+
+  /* ---------- timeline ---------- */
+  .timeline{position:relative;margin-top:10px;padding-left:34px}
+  .timeline::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:var(--sand)}
+  .phase{position:relative;padding-bottom:30px}
   .phase:last-child{padding-bottom:0}
-  .phase::before{content:"";position:absolute;left:0;top:6px;width:11px;height:11px;border-radius:50%;background:var(--brown)}
-  .phase .wk{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--brown)}
-  .phase h4{font-family:"Figtree";font-weight:700;font-size:1.05rem;margin:2px 0 5px;color:var(--ink)}
-  .phase p{margin:0;font-size:14px;line-height:1.42;color:var(--taupe)}
+  .phase::before{content:"";position:absolute;left:-33px;top:4px;width:16px;height:16px;border-radius:50%;background:var(--cream);border:3px solid var(--sage)}
+  .band .phase::before{background:var(--cream-2)}
+  .phase .weeks{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);font-weight:700}
+  .phase h3{font-size:1.28rem;margin:4px 0 8px}
+  .phase p{margin:0;font-size:15.5px}
 
-  /* faq */
-  .faq{margin-top:6px}
-  .qa{margin-bottom:15px}
-  .qa .q{font-weight:700;font-size:15px;color:var(--ink);margin:0 0 3px}
-  .qa .a{font-size:14px;line-height:1.42;color:var(--taupe);margin:0}
-  .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 30px}
+  /* ---------- coach ---------- */
+  .coach-grid{display:flex;flex-direction:column;gap:26px}
+  .coach-photo{width:100%;max-width:320px;margin:0 auto}
+  .role{font-size:13px;color:var(--sage);font-weight:600;letter-spacing:.02em;margin:2px 0 18px}
+  .coach-copy p{font-size:16px}
+  .coach-copy p:last-child{margin-bottom:0}
 
-  /* price */
-  .price{background:var(--brown);border-radius:20px;padding:32px 34px;color:#efeae3;margin-bottom:22px}
-  .price .ph{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#d6c8bb;margin:0 0 12px}
-  .price .amt{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
-  .price .amt b{font-weight:900;font-size:3rem;color:#f2eee7;line-height:1}
-  .price .amt span{font-weight:500;font-size:16px;color:#d6c8bb}
-  .price .fr{font-style:italic;font-size:14.5px;color:#e0d6cc;margin:0 0 18px}
-  .price .pay{margin:0;font-size:14.5px;line-height:1.6;color:#e8e2da}
+  /* ---------- proof ---------- */
+  .proof-grid{display:flex;flex-direction:column;gap:14px}
+  .tcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 22px}
+  .band .tcard{background:var(--cream)}
+  .tquote{font-size:15.5px;color:#4a5642;font-style:italic;min-height:60px;display:flex;align-items:center}
+  .tmeta{display:flex;align-items:center;gap:12px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+  .tavatar{width:44px;height:44px;border-radius:50%;border:1.5px dashed rgba(113,90,70,.55);display:flex;align-items:center;justify-content:center;color:var(--sage);font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-align:center;line-height:1.2}
+  .tname{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sage)}
+  .proof-note{text-align:center;font-size:13px;color:var(--sage);margin-top:20px;font-style:italic;font-family:"Figtree",serif}
+  .proof-grid .tcard{flex:1}
+  .tlabel{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);margin-bottom:12px}
+  .tbody{font-size:15px;line-height:1.5;color:#4a5642;margin:0}
+  .band .tbody{color:#41503a}
 
-  /* cta */
-  .cta{background:var(--ink);border-radius:20px;padding:34px;text-align:center;color:var(--lite)}
-  .cta .r{font-weight:700;font-size:1.5rem;color:#eceee9;margin:0 0 6px}
-  .cta .m{font-size:15px;color:#aeb4ac;margin:0 0 10px}
-  .cta .num{font-weight:900;font-size:clamp(1.8rem,6vw,2.4rem);color:#f0ece5;letter-spacing:.01em;margin:0 0 14px}
-  .cta .sc{font-style:italic;font-size:13.5px;color:var(--brownlite);margin:0}
+  /* ---------- offer stack ---------- */
+  .stack{display:grid;grid-template-columns:1fr;gap:2px;background:var(--line);border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+  .stack-item{background:var(--cream);padding:15px 18px 15px 44px;position:relative;font-size:15.5px}
+  .band .stack-item{background:var(--cream-2)}
+  .stack-item::before{content:"";position:absolute;left:16px;top:20px;width:14px;height:8px;border-left:2.4px solid var(--sage);border-bottom:2.4px solid var(--sage);transform:rotate(-45deg)}
 
-  footer{text-align:center;padding:24px 20px 30px;font-size:13px;color:var(--taupe)}
+  /* ---------- price ---------- */
+  .offer{background:var(--green);color:var(--cream);border-radius:24px;padding:40px 28px;text-align:center;box-shadow:var(--shadow)}
+  .offer .eyebrow{justify-content:center;color:var(--sand)}
+  .offer .eyebrow::before{background:var(--sand)}
+  .offer h2{color:#fff;font-size:clamp(1.7rem,6.4vw,2.3rem);margin-bottom:12px}
+  .offer .promise{font-family:"Figtree",serif;font-style:italic;color:var(--sand);font-size:1.2rem;line-height:1.4;margin:0 auto 26px;max-width:26ch}
+  .price-big{font-family:"Figtree",serif;font-size:3rem;color:#fff;line-height:1}
+  .price-sub{font-size:14px;color:rgba(245,243,239,.7);margin-bottom:6px}
+  .founding{font-size:13.5px;color:var(--sand);letter-spacing:.02em;margin-bottom:24px}
+  .pay{text-align:left;max-width:40ch;margin:0 auto 26px}
+  .pay-title{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);font-weight:700;margin-bottom:12px;text-align:center}
+  .pay-item{display:flex;gap:12px;font-size:15px;color:rgba(245,243,239,.9);padding:8px 0}
+  .pay-item .dot{flex:0 0 7px;height:7px;border-radius:50%;background:var(--sage);margin-top:9px}
+  .scarce{font-size:14px;color:var(--sand);margin:22px auto 0;max-width:34ch}
 
-  @media(max-width:600px){
-    .head,.body{padding-left:26px;padding-right:26px}
-    .cols{flex-direction:column;gap:26px}
-    .faq-grid{grid-template-columns:1fr}
-    .stats{gap:7px}
-    .price,.cta{padding:26px}
+  /* ---------- faq ---------- */
+  details{border-bottom:1px solid var(--line);padding:6px 0}
+  details summary{list-style:none;cursor:pointer;padding:16px 34px 16px 2px;font-weight:600;font-size:16px;position:relative;color:var(--green)}
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{content:"";position:absolute;right:6px;top:22px;width:10px;height:10px;border-right:2px solid var(--sage);border-bottom:2px solid var(--sage);transform:rotate(45deg);transition:transform .22s ease}
+  details[open] summary::after{transform:rotate(-135deg)}
+  details .answer{padding:0 6px 18px 2px;font-size:15.5px;color:#37452f}
+
+  /* ---------- final ---------- */
+  .final{background:var(--green);color:var(--cream);text-align:center;padding:64px 0}
+  .final .eyebrow{justify-content:center;color:var(--sand)}
+  .final .eyebrow::before{background:var(--sand)}
+  .final h2{color:#fff;font-size:clamp(1.9rem,7vw,2.5rem);margin-bottom:20px}
+  .final p{color:rgba(245,243,239,.88);max-width:42ch;margin:0 auto 16px}
+  .final .count{font-family:"Figtree",serif;font-style:italic;color:var(--sand);font-size:1.25rem;margin:8px auto 30px;max-width:30ch}
+  .final .fineprint{font-size:13.5px;color:rgba(245,243,239,.6);max-width:40ch;margin:22px auto 0}
+  .final .btn{font-size:15px;padding:19px 34px}
+
+  footer{text-align:center;padding:34px 24px 46px;font-size:13px;color:var(--sage)}
+  footer .mark{font-family:"Figtree",serif;font-style:italic;font-size:1.15rem;color:var(--green);margin-bottom:6px}
+  footer .copyright{font-size:12px;color:var(--sage);opacity:.85;margin-top:40px;letter-spacing:.02em}
+
+  /* ---------- sticky ---------- */
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(245,243,239,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:11px 18px;display:flex;align-items:center;gap:14px;box-shadow:0 -12px 30px -24px rgba(34,34,34,.5)}
+  .sticky .s-price{line-height:1.05}
+  .sticky .s-price b{font-family:"Figtree",serif;font-size:1.3rem;color:var(--green);display:block}
+  .sticky .s-price small{font-size:10.5px;color:var(--sage);letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+  .sticky .btn{flex:1;text-align:center;padding:15px 18px;font-size:13.5px}
+
+  /* ---------- desktop ---------- */
+  @media(min-width:760px){
+    .hero{padding:64px 0 104px}
+    .hero-grid{flex-direction:row;justify-content:space-between;gap:48px;text-align:left}
+    .hero-copy{text-align:left;flex:1}
+    .hero .eyebrow{justify-content:flex-start}
+    .hero .promise,.hero .blurb{margin-left:0}
+    .hero-photo{max-width:400px;flex:0 0 400px}
+    .gap-grid{flex-direction:row;align-items:stretch}
+    .gap-grid .gap-card{flex:1;display:flex;flex-direction:column}
+    .gap-arrow{display:flex;align-items:center;transform:rotate(-90deg);font-size:26px}
+    .stats{grid-template-columns:repeat(5,1fr)}
+    .pillars-grid{flex-direction:row}
+    .pillars-grid .pillar{flex:1}
+    .coach-grid{flex-direction:row;align-items:flex-start;gap:40px}
+    .coach-photo{flex:0 0 300px;margin:0}
+    .coach-copy{flex:1}
+    .proof-grid{flex-direction:row}
+    .proof-grid .tcard{flex:1}
+    .stack{grid-template-columns:1fr 1fr;gap:2px}
   }
 </style>
 </head>
 <body>
-<div class="poster">
 
-  <!-- HEADER -->
-  <div class="head">
-    <div class="logo-ph"><img src="logo_beige.png" width="30px" height="auto"/></div>
-    <p class="eyebrow">Limited to 15 women · The first group</p>
-    <h1>8-Week Stronger You Challenge</h1>
-    <p class="promise">Get stronger. Feel fitter. Build a routine you can actually keep.</p>
-    <p class="facts">For women · Mauritius · Starts Mon 24 August</p>
-  </div>
+<!-- TOP BAR / WORDMARK PLACEHOLDER -->
+<div class="topbar">
+  <div class="wrap">
+    <img src="logo_beige.png" alt="Nutria" height="40px;"/>
+</div>
+</div>
 
-  <!-- BODY -->
-  <div class="body">
-
-    <div class="block">
-      <p class="kicker-h">What it is</p>
-      <p class="lead">Eight weeks of small-group strength coaching and practical nutrition guidance, for women who want to feel stronger, more energetic and confident in their body.</p>
-      <div class="stats">
-        <div class="stat"><div class="n">8</div><div class="l">Weeks</div></div>
-        <div class="stat"><div class="n">16</div><div class="l">Sessions</div></div>
-        <div class="stat"><div class="n">2×</div><div class="l">Per week</div></div>
-        <div class="stat"><div class="n">3–5</div><div class="l">Per pod</div></div>
-        <div class="stat"><div class="n">50</div><div class="l">Minutes</div></div>
-      </div>
-      <div class="split">40 min strength &nbsp;+&nbsp; 10 min nutrition, every session</div>
+<!-- 1 · HERO -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+        <p class="eyebrow">THE STRONGER YOU CHALLENGE · WOMEN ONLY</p>
+        <h1>Training hard but still not feeling or seeing yourself get stronger?</h1>
+        <h3 class="facts">Build strength. Build lean muscle. Learn how to fuel your body.</h3>
+        <!--h2 class="facts">8 weeks · Mauritius, North Region · Starts 1 September</h2-->
+        <h4 class="">8 weeks of small-group strength coaching + practical nutrition guidance, for women who want to feel stronger, more energetic, and confident in their body.</h4>
+        <h4 class="meta">2 sessions/week <span>·</span> Pods of 3–5 <span>·</span> Starts 1 September</h3>
+    
+      <!--p class="eyebrow">The First 15</p>
+      <h1>8-Week Stronger You Challenge</h1>
+      <p class="promise">Training hard but still not seeing the strength or shape you want?</p>
+      <p class="result">Build strength. Build lean muscle. Learn how to fuel your body.</p>
+      <p class="blurb">8 weeks of small-group strength coaching + practical nutrition guidance, for women who want to feel stronger, more energetic, and confident in their body.</p>
+      <p class="meta">2 sessions/week <span>·</span> Pods of 3–5 <span>·</span> Starts 1 September</p>
+      <a class="btn btn-gold" href="https://wa.me/23057892535?text=Hi%20Adeelah%2C%20I%27d%20like%20to%20join%20the%20Stronger%20You%20Challenge.%20Can%20you%20send%20me%20the%20details%3F" target="_blank" rel="noopener">Join the First 15</a>
+    -->
     </div>
+    <div class="hero-photo">
+        
+      <div class="photo r-hero">
+        <img src="ktbgirl.jpg" alt="Woman resting with a kettlebell after strength training"/>
+      </div>
+    </div>
+  </div>
+</header>
 
-    <!-- SIDE BY SIDE -->
-    <div class="block cols">
-      <div class="col">
-        <p class="kicker-h">What you get</p>
-        <ul class="gets">
-          <li>16 coached sessions in a small, friendly pod</li>
-          <li>Day-1 assessment: measurements, fitness test, goal</li>
-          <li>Strength coaching adjusted to your level</li>
-          <li>Nutrition guidance in every session</li>
-          <li>Your accountability pod and group support</li>
-          <li>Permanent access to every material</li>
-          <li>A take-home strength routine, yours to keep</li>
-          <li>A private welcome call before Day 1</li>
+<!-- 2 · OUTCOME -->
+<section>
+  <div class="narrow reveal">
+    <p class="eyebrow">In 8 weeks</p>
+    <h2 class="section-title">You'll work towards</h2>
+    <ul class="ticks">
+      <li>Measurable gains in strength and fitness</li>
+      <li>A real understanding of how to fuel your body</li>
+      <li>A training routine you keep, not restart</li>
+      <li>An eating rhythm you can continue</li>
+      <li>The confidence to know your next step</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 3 · SELF-IDENTIFICATION -->
+<section class="band">
+  <div class="narrow reveal">
+    <p class="eyebrow">This is for you</p>
+    <h2 class="section-title">This is for you if</h2>
+    <ul class="plain">
+      <li>You want to feel strong in your body again, not just lighter.</li>
+      <li>You want to build real strength and tone. To feel it, and see it too.</li>
+      <li>You've tried before, harder than you'd admit. You're not lazy. You're tired of starting over.</li>
+      <li>You want structure and real support, not another plan to follow alone.</li>
+      <li>You're ready to begin, but you never want to begin again from zero.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4 · THE GAP -->
+<section>
+  <div class="wrap reveal">
+    <p class="eyebrow center" style="justify-content:center">The shift</p>
+    <h2 class="section-title" style="text-align:center">From where you are to where you're headed</h2>
+    <div class="kicker" style="text-align:center;margin-bottom:30px">Same you. A method, a group, and eight weeks that hold.</div>
+    <div class="gap-grid">
+      <div class="gap-card gap-now">
+        <h3>Where you are now</h3>
+        <ul class="gap-list">
+          <li>Starting strong, then losing momentum</li>
+          <li>Training alone, unsure it's working</li>
+          <li>Trying hard for little visible progress</li>
+          <li>Not sure how to eat for your goals</li>
+          <li>Back at square one after a missed week</li>
         </ul>
       </div>
-      <div class="col">
-        <p class="kicker-h">Your 8 weeks</p>
-        <div class="phase">
-          <div class="wk">Weeks 1–2</div>
-          <h4>Find your starting line</h4>
-          <p>Measure where you are, test your strength, set your goal and start training.</p>
-        </div>
-        <div class="phase">
-          <div class="wk">Weeks 3–5</div>
-          <h4>Build</h4>
-          <p>Strength ramps up as you learn your hunger cues, cravings and food choices.</p>
-        </div>
-        <div class="phase">
-          <div class="wk">Weeks 6–8</div>
-          <h4>Make it yours</h4>
-          <p>Bring it together and build a rhythm you continue after the 8 weeks.</p>
+      <div class="gap-arrow">↓</div>
+      <div class="gap-card gap-method">
+        <h3>The Stronger You method</h3>
+        <p>Strength coaching + nutrition guidance + a small pod beside you.</p>
+        <div class="photo r-wide" style="margin-top:18px">
+          <img src="grpcoach.jpg" alt="Coach guiding a small group of women through training"/>
         </div>
       </div>
-    </div>
-
-    <!-- FAQ -->
-    <div class="block">
-      <p class="kicker-h">Your questions, answered</p>
-      <div class="faq faq-grid">
-        <div class="qa"><p class="q">New to training?</p><p class="a">Every exercise is adjusted to your level. Beginners welcome.</p></div>
-        <div class="qa"><p class="q">Need any equipment?</p><p class="a">No. Just comfortable clothes and water.</p></div>
-        <div class="qa"><p class="q">Is it a strict diet?</p><p class="a">No calorie counting, no banned foods. You learn your own rhythm.</p></div>
-        <div class="qa"><p class="q">What if I miss a session?</p><p class="a">You keep every material and pick up where you left off.</p></div>
-        <div class="qa"><p class="q">Where does it happen?</p><p class="a">In your pod's area, close to you. Confirmed once your group forms.</p></div>
-        <div class="qa"><p class="q">Can I split payment?</p><p class="a">Yes. 60% before Day 1, 40% at Week 4.</p></div>
+      <div class="gap-arrow">↓</div>
+      <div class="gap-card gap-next">
+        <h3>Where you're headed</h3>
+        <ul class="gap-list">
+          <li>Strength you can feel, day to day</li>
+          <li>Energy that lasts, no afternoon crash</li>
+          <li>Eating that feels easy, no guilt after</li>
+          <li>Trust in yourself, because you did it</li>
+          <li>When a week slips, you pick up where you left off</li>
+        </ul>
       </div>
     </div>
-
-    <!-- PRICE -->
-    <div class="price">
-      <p class="ph">The investment</p>
-      <div class="amt"><b>Rs 4,900</b><span>per person</span></div>
-      <p class="fr">Founding rate for the very first Stronger You group.</p>
-      <p class="pay">Pay once before we start <br>Or split it: 60% before Day 1, 40% at Week 4.</p>
+    <div class="cta-wrap">
+      <a class="btn btn-gold" href="https://wa.me/23057892535?text=Hi%20Adeelah%2C%20I%27d%20like%20to%20join%20the%20Stronger%20You%20Challenge.%20Can%20you%20send%20me%20the%20details%3F" target="_blank" rel="noopener">Join the First 15</a>
     </div>
-
-    <!-- CTA -->
-    <div class="cta">
-      <p class="r">Ready to join?</p>
-      <p class="m">Message me on WhatsApp</p>
-      <p class="num">+230 5789 2535</p>
-      <p class="sc">15 spots only. When they're full, the group closes.</p>
-    </div>
-
   </div>
+</section>
 
-  <footer>Behavioural nutrition &amp; strength coaching · Mauritius</footer>
+<!-- 5 · HOW IT WORKS -->
+<section class="band">
+  <div class="wrap reveal">
+    <p class="eyebrow center" style="justify-content:center">The format</p>
+    <h2 class="section-title" style="text-align:center;margin-bottom:26px">How Stronger You works</h2>
+    <div class="stats">
+      <div class="stat"><div class="n">8</div><div class="l">Weeks</div></div>
+      <div class="stat"><div class="n">16</div><div class="l">Sessions</div></div>
+      <div class="stat"><div class="n">2×</div><div class="l">Per week</div></div>
+      <div class="stat"><div class="n">3–5</div><div class="l">Women / pod</div></div>
+      <div class="stat"><div class="n">50</div><div class="l">Minutes</div></div>
+    </div>
+    <div class="split">
+      <div class="s-item"><div class="s-n">40 min</div><div class="s-l">Strength</div></div>
+      <div class="plus">+</div>
+      <div class="s-item"><div class="s-n">10 min</div><div class="s-l">Eating Rhythm</div></div>
+    </div>
+    <p style="text-align:center;margin:28px auto 0;max-width:44ch;font-size:16px;color:#222222;line-height:1.5">
+      <strong>Where we train:</strong> at the gym nearest your pod, or with Adeelah at Health &amp; Fitness Gym, Goodlands.
+    </p>
+  </div>
+</section>
+
+<!-- 6 · TWO PILLARS -->
+<section class="band-green">
+  <div class="wrap reveal">
+    <p class="eyebrow">Two pillars</p>
+    <h2 class="section-title">One programme. Two pillars.</h2>
+    <p class="kicker">Both are Stronger You. Neither is a bonus.</p>
+    <div class="pillars-grid">
+      <div class="pillar">
+        <span class="p-label">Pillar one</span>
+        <h3>Strength</h3>
+        <p>Structured resistance training twice a week, adjusted to your level. More power, more energy, a body that keeps up with your day. This is where you get visibly stronger and more toned.</p>
+      </div>
+      <div class="pillar">
+        <span class="p-label">Pillar two</span>
+        <h3>Nutrition</h3>
+        <p>This is my Eating Rhythm method, the same work at the heart of Nutria, coached live in every session. You'll learn to read your hunger, quiet the food noise, and fuel your training, so you have the energy to show up and what you build actually holds. No calorie counting. No food rules. Just your own rhythm, restored.</p>
+      </div>
+    </div>
+    <p class="pillars-bridge">Strength builds the results. Your eating rhythm is what makes them last.</p>
+    <div class="cta-wrap">
+      <a class="btn btn-cream" href="https://wa.me/23057892535?text=Hi%20Adeelah%2C%20I%27d%20like%20to%20join%20the%20Stronger%20You%20Challenge.%20Can%20you%20send%20me%20the%20details%3F" target="_blank" rel="noopener">Join the First 15</a>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · YOUR 8 WEEKS -->
+<section>
+  <div class="narrow reveal">
+    <p class="eyebrow">The journey</p>
+    <h2 class="section-title">Your 8 weeks</h2>
+    <div class="timeline" style="margin-top:22px">
+      <div class="phase">
+        <p class="weeks">Weeks 1–2</p>
+        <h3>Find your starting line</h3>
+        <p>We measure where you are, test your strength, and map your eating patterns without judgment. You start training, and you start noticing.</p>
+      </div>
+      <div class="phase">
+        <p class="weeks">Weeks 3–5</p>
+        <h3>Build</h3>
+        <p>Strength ramps up. You learn about your hunger cues, your cravings, and the hidden factors shaping your food choices. That's where it clicks.</p>
+      </div>
+      <div class="phase">
+        <p class="weeks">Weeks 6–8</p>
+        <h3>Make it yours</h3>
+        <p>You see how far you've come, bring the pieces together, and build the eating rhythm you'll carry forward. You leave with your strength routine, your lessons, and a clear next step.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · COACH -->
+<section class="band">
+  <div class="wrap reveal">
+    <div class="coach-grid">
+      <div class="coach-photo">
+        <div class="photo r-portrait">
+          <img src="meetadeela.jpg" alt="Adeelah, founder of Nutria, training with a kettlebell"/>
+        </div>
+      </div>
+      <div class="coach-copy">
+        <p class="eyebrow">Your coach</p>
+        <h2 class="section-title">Meet Adeelah</h2>
+        <p class="role">Certified kettlebell instructor · Nutrition &amp; Weight Management Adviser · Behaviour change coach · 2nd-degree black belt, 20 years · Founder of Nutria</p>
+        <p>I'm Adeelah, founder of Nutria: a certified kettlebell instructor and Nutrition and Weight Management Adviser, a behaviour change coach, and a second-degree black belt with 20 years in martial arts. Two decades of training taught me the thing most fitness plans miss: strength isn't force. It's rhythm.</p>
+        <p>I built Stronger You because I lived it. I struggled to get stronger and to put on weight, did everything right and still saw no results, and watched my progress drain away the moment life pulled me off track. This is the programme I wish I'd had: real strength, real support, and a way of eating that finally fits a real life.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · PROOF (placeholders) -->
+<section>
+  <div class="wrap reveal">
+    <p class="eyebrow center" style="justify-content:center">The First 15</p>
+    <h2 class="section-title" style="text-align:center;margin-bottom:10px">You'd be one of the first</h2>
+    <div class="kicker" style="text-align:center;margin-bottom:30px">I could fill this space with borrowed words. I'd rather leave it for yours.</div>
+    <div class="proof-grid">
+      <div class="tcard">
+        <div class="tlabel">Smaller by design</div>
+        <p class="tbody">The First 15 train in pods of three to five. Seen, corrected, known by name. That kind of attention doesn't scale, which is exactly why it's now.</p>
+      </div>
+      <div class="tcard">
+        <div class="tlabel">More of me</div>
+        <p class="tbody">While the group is this small, you get my full attention. And a founding rate that won't come back once the first cohort fills.</p>
+      </div>
+      <div class="tcard">
+        <div class="tlabel">Your words go here</div>
+        <p class="tbody">This space fills as the weeks unfold, in the First 15's own words. The next group joins because of what you built.</p>
+      </div>
+    </div>
+    <p class="proof-note">Real words from the First 15 will replace this as the group shares them.</p>
+  </div>
+</section>
+
+<!-- 10 · OFFER STACK -->
+<section class="band">
+  <div class="wrap reveal">
+    <p class="eyebrow">Included</p>
+    <h2 class="section-title">Everything included in Stronger You</h2>
+    <p class="kicker">Everything you need for the 8 weeks, and everything you keep after.</p>
+    <div class="stack">
+      <div class="stack-item">16 coached sessions in your small pod</div>
+      <div class="stack-item">Day-1 assessment</div>
+      <div class="stack-item">Measurements</div>
+      <div class="stack-item">Fitness testing</div>
+      <div class="stack-item">Personal goal setting</div>
+      <div class="stack-item">Strength coaching adjusted to your level</div>
+      <div class="stack-item">Nutrition guidance in every session</div>
+      <div class="stack-item">A small accountability pod</div>
+      <div class="stack-item">Daily group support</div>
+      <div class="stack-item">Permanent access to all materials</div>
+      <div class="stack-item">A take-home strength routine, yours for good</div>
+      <div class="stack-item">Private welcome / rhythm-audit call</div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 · PRICE -->
+<section id="join">
+  <div class="narrow reveal">
+    <div class="offer">
+      <p class="eyebrow">STRONGER YOU CHALLENGE</p>
+      <h2>15 women. 8 weeks.</h2>
+      <p class="promise">Let's see how much stronger you can become.</p>
+      <div class="price-big">Rs 4,900</div>
+      <p class="price-sub">per person</p>
+      <p class="founding">Founding rate for the first 15. From group two, it goes up to Rs 6,900.</p>
+      <div class="pay">
+        <p class="pay-title">Two ways to pay</p>
+        <div class="pay-item"><span class="dot"></span><span>Pay once before we start</span></div>
+        <div class="pay-item"><span class="dot"></span><span>Or split it: 60% before Day 1, 40% at week 4. Just ask.</span></div>
+      </div>
+      <a class="btn btn-cream" href="https://wa.me/23057892535?text=Hi%20Adeelah%2C%20I%27d%20like%20to%20join%20the%20Stronger%20You%20Challenge.%20Can%20you%20send%20me%20the%20details%3F" target="_blank" rel="noopener">Join the First 15</a>
+      <p class="scarce">Enrol by 31 August, starts 1 September. 15 spots are open now. The next group is Rs 6,900.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 12 · FAQ -->
+<section class="band">
+  <div class="narrow reveal">
+    <p class="eyebrow">Questions</p>
+    <h2 class="section-title">Questions, answered</h2>
+    <div style="margin-top:18px">
+      <details>
+        <summary>Do I need to be fit already?</summary>
+        <div class="answer">No. Day 1 meets you exactly where you are, and every exercise is adjusted to your level. Beginners are welcome, and so are women coming back after a long break.</div>
+      </details>
+      <details>
+        <summary>Will I be the weakest one there?</summary>
+        <div class="answer">No. You’ll be placed in a small group with women at a similar level to you. You’ll progress at your own pace, it’s not a competition.</div>
+      </details>
+      <details>
+        <summary>Is this one on one?</summary>
+        <div class="answer">No. You’ll train in a small group of 3 to 5 women. That’s part of what makes it encouraging. You show up for each other, and the sessions are more fun because of it.</div>
+      </details>
+      <details>
+        <summary>Where do the sessions happen?</summary>
+        <div class="answer">Already have a group of friends and a place in mind? I’ll come to you, so training stays close and convenient. New to it or not sure where to go? Train with me at Health & Fitness Gym in Goodlands. We’ll find a day and time that works for your group.</div>
+      </details>
+      <details>
+        <summary>Do I need any equipment?</summary>
+        <div class="answer">Everything you need is available at Health & Fitness Gym. Just bring yourself, comfortable clothes and water. If I’m coming to train your group at your location, we’ll just need to make sure the basic equipment is available.</div>
+      </details>
+      <details>
+        <summary>How much time does it take?</summary>
+        <div class="answer">Two 50-minute sessions a week, plus whatever small habits you choose to build between them. It's designed to fit a real, busy life, not take it over.</div>
+      </details>
+      <details>
+        <summary>What if I miss a session?</summary>
+        <div class="answer">Life happens, and missing a day is not starting over. You keep every material, we adjust, and you pick up where you left off. That is the whole point of building a rhythm instead of a streak.</div>
+      </details>
+      <details>
+        <summary>I've tried things before and stopped. Why would this be different?</summary>
+        <div class="answer">This isn't another fitness plan with a diet attached. It's built around how behaviour actually changes and the psychology behind why we eat the way we do. You stop being someone who starts over, and become someone who understands her own body and knows what works for her. That's what makes the habits last long after week 8, instead of running on willpower and discipline alone.</div>
+      </details>
+      <details>
+        <summary>Do I have to count calories or cut out foods?</summary>
+        <div class="answer">No calorie counting and no banned foods. You'll learn to understand your own hunger and choices, so eating gets easier, not stricter.</div>
+      </details>
+      <details>
+        <summary>How do I pay, and can I split it?</summary>
+        <div class="answer">Once, before we start, by MCB Juice. Message me and I'll send the details and confirm your spot. If you need to split it, you can pay 60% now and 40% at week 4.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 13 · FINAL CLOSE -->
+<section class="final" id="final">
+  <div class="narrow reveal">
+    <p class="eyebrow">Join now</p>
+    <h2>Come and get stronger, together</h2>
+    <p>You don't need another perfect Monday. You need a starting point, a group beside you, and a routine you know how to continue.</p>
+    <p>Build the strong body you've been dreaming of, alongside a group of like-minded women, and a way of eating that finally fits your life.</p>
+    <p class="count">Fifteen women. Eight weeks. Let's see how much stronger you can become.</p>
+    <a class="btn btn-gold" href="https://wa.me/23057892535?text=Hi%20Adeelah%2C%20I%27d%20like%20to%20join%20the%20Stronger%20You%20Challenge.%20Can%20you%20send%20me%20the%20details%3F" target="_blank" rel="noopener">Join the First 15 on WhatsApp</a>
+    <p class="fineprint">Message Adeelah. She'll confirm your pod, answer any final questions, and send the payment details. Your place is held for 48 hours while you complete payment.</p>
+  </div>
+</section>
+
+<footer>
+  <p class="mark"><img src="logo_brown.png" width="40px" height="auto" alt="Nutria"></p>
+  <p><strong>With Adeelah</strong><br/> Certified Kettlebell Instructor · Nutrition &amp; Behaviour Change Coach · 2nd Dan Black Belt, Kyokushin Karate · Mauritius</p>
+  <p class="copyright">© 2026 Nutria Living Ltd. All rights reserved.</p>
+</footer>
+
+<div class="sticky">
+  <div class="s-price"><b>Rs 4,900</b><small>The First 15</small></div>
+  <a class="btn btn-green" href="https://wa.me/23057892535?text=Hi%20Adeelah%2C%20I%27d%20like%20to%20join%20the%20Stronger%20You%20Challenge.%20Can%20you%20send%20me%20the%20details%3F" target="_blank" rel="noopener">Join on WhatsApp</a>
 </div>
+
+<script>
+  const els=document.querySelectorAll('.reveal');
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(e=>e.classList.add('in'));
+  }else if('IntersectionObserver' in window){
+    const io=new IntersectionObserver((entries)=>{
+      entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{threshold:.1});
+    els.forEach(e=>io.observe(e));
+  }else{
+    els.forEach(e=>e.classList.add('in'));
+  }
+</script>
 </body>
 </html>
